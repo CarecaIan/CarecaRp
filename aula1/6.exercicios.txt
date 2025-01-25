@@ -1,0 +1,199 @@
+Lista de Exercícios de Algoritmos
+
+1 – Somar dois números e multiplicar o resultado pelo primeiro número.
+Escreva um algoritmo que leia dois números, calcule a soma e depois multiplique o resultado pela variável que contém o primeiro número.
+
+
+<?php 
+	$numero1 =readline("Digite eu numero: \n");
+	$numero2 =readline("Digite outro numero numero: \n");
+	$soma = $numero1 + $numero2;
+
+	$multi = $soma * $numero1;
+
+	echo " o numero 1 e :$numero1 \n o numero 2  e :$numero2\n a soma dos numeros e $soma \n
+a multiplicacao e $multi \n "
+
+?>
+
+2 – Média de três números.
+Escreva um algoritmo que leia três números nas variáveis Val1, Val2 e Val3, calcule sua média na variável media e exiba para o usuário o resultado.
+
+<?php 
+	$numero1 =readline("Digite eu numero: \n");
+	$numero2 =readline("Digite outro numero numero: \n");
+	$numero3 =readline("Digite outro numero numero: \n");
+
+	$soma = $numero1 + $numero2 + $numero3;
+
+	$media = $soma / 3;
+
+	echo " o numero 1 e :$numero1 \n o numero 2  e :$numero2\n a soma dos numeros e $soma \n
+a meida e $media \n "
+
+?>
+
+
+
+3 – Calcular 15% de um valor.
+Escreva um algoritmo que receba um valor e calcule 15% deste valor, exibindo o resultado para o usuário.
+
+<?php 
+	$numero1 =readline("Digite eu numero: \n");
+	$por= $numero1 * 0.15;
+	echo "15 por cento do valor é referente a $por";
+?>
+
+
+4 – Calcular 5% e 50% de um valor.
+Escreva um algoritmo que receba um valor, calcule e mostre para o usuário 5% e 50% deste valor.
+
+<?php 
+	$numero1 =readline("Digite eu numero: \n");
+	$por= $numero1 * 0.05;
+	$por2= $numero1 * 0.50;
+
+	echo "5 por cento do valor é referente a $por\n";
+	echo "50 por cento do valor é referente a $por2\n";
+?>
+
+
+5 – Somar os quadrados de dois números.
+Escreva um algoritmo que leia dois números, calcule o quadrado de cada um, some os quadrados e mostre o resultado.
+
+<?php 
+	$numero1 =readline("Digite eu numero: \n");
+	$numero2 =readline("Digite eu numero: \n");
+	$qua = $numero1 * $numero1
+	$qua2 = $numero2 * $numero2
+	$soma = $qua + $qua2
+
+
+	echo "a soma dos quadrados e $soma\n";
+	
+?>
+
+
+6 – Converter a velocidade de m/s para km/h.
+Escreva um algoritmo que leia a velocidade de um objeto em metros por segundo (m/s), calcule e exiba para o usuário a velocidade em quilômetros por hora (km/h).
+<?php 
+	$numero1 =readline("Digite a velocidade em metros por segundo: \n");
+	$km = $numero1 *3.6;
+
+	echo "a vel em km por hora e $km \n";
+	
+?>
+
+
+7 – Calcular o IMC (Índice de Massa Corporal).
+Escreva um algoritmo que leia a altura e o peso de uma pessoa, calcule o seu IMC e exiba o resultado para o usuário.
+<?php 
+	$alt =readline("Digite a sua altura em cm: \n");
+	$pes =readline("Digite seu peso em kg: \n");
+
+	$imc = $pes / ($alt * $alt);
+	
+	echo "O imc desta pessoa e $imc ";
+?>
+
+
+8 – Calcular o desconto de 7% em um produto.
+Escreva um algoritmo que receba o valor de um produto, calcule um desconto de 7%, e exiba para o usuário o valor original, o valor do desconto e o valor com o desconto.
+
+<?php 
+	$prod =readline("Digite ao valor do produto: \n");
+	
+
+	$desc = $prod - ($prod * 0.07);
+	echo "O valor do produto com desconto e $desc ";
+?>
+
+
+
+9 – Calcular o volume de uma caixa retangular.
+Escreva um algoritmo que calcule e apresente o volume de uma caixa retangular utilizando a fórmula: volume = comprimento x largura x altura.
+
+<?php 
+	$alt =readline("Digite a altura: \n");
+	$lar =readline("Digite a largura: \n");
+	$com =readline("Digite o comprimento: \n");
+
+	$volume = $alt*$lar*$com;
+	echo "O volume do produto e $volume ";
+?>
+
+
+
+
+10 – Parcelar uma compra com 16% de acréscimo.
+Escreva um algoritmo que receba o valor de um produto, acrescente 16% a esse valor, divida em 10 parcelas e mostre para o usuário o valor da parcela e o valor total da compra.
+
+<?php 
+	$valor =readline("Digite o valor: \n");
+
+	$acr = ($valor * 0.16) + $valor;
+	$par = $acr/10;
+	echo "O valor total da venda e $acr \n O valor da parcela e $par\n";
+?>
+
+
+
+Desafio – Calculadora Simples:
+Crie uma calculadora simples no terminal que permita ao usuário escolher uma operação (soma, subtração, multiplicação ou divisão) e, em seguida, insira dois números para realizar a operação escolhida. Depois de calcular o resultado, verifique e exiba:
+  - Se o resultado é positivo ou negativo.
+  - Se o resultado é ímpar ou par.
+<?php 
+	$op =readline("Digite a operação(soma, subtração, multiplicação ou divisão:) \n");
+	if ($op=="soma") {
+		$op="+";
+	}elseif ($op=="subtração"){
+		$op="-";
+	}elseif ($op=="multiplicação") {
+		$op="*";
+	}elseif ($op=="divisão") {
+		$op="/";
+	}
+
+	$num1 =readline("Digite um numero \n");
+	$num2 =readline("Digite outro numero \n");
+	
+	switch($op){
+	case "+":
+		$soma = $num1 + $num2;
+		echo "resultado:$soma\n";
+		$resul = $soma;
+		break;
+	case "-":
+		$sub = $num1 -$num2;
+		echo "resultado:$sub\n";
+		$resul = $sub;
+		break;
+	case "*":
+		$mul = $num1 * $num2;
+		echo "resultado:$mul\n";
+		$resul = $mul;
+		break;
+	case "/":
+		$div = $num1 / $num2;
+		echo "resultado:$div\n";
+		$resul = $div;
+		break;
+	default:
+		echo "Não foi digitado corretamente\n";};
+	
+	if ($resul <=0){
+		echo "o numero é negativo\n";
+	}else{
+		echo "o numero é positivo\n";
+	}
+	
+	if($resul %2== 0 ){
+		echo "o numero é par";
+	}else{
+	echo "o resultado é impar";
+	}
+
+	
+	
+?>
+
